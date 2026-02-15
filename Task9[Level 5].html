@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 9 Portfolio [Level 5]</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card{
+        background-color: black;
+    }
+
+    .btn-info{
+        color:black;
+        background-image: linear-gradient(rgb(32, 182, 196),White);
+    }
+ 
+    .btn-info:hover{
+        color: black;
+        background-image: linear-gradient(white, rgb(32, 182, 196));
+    }
+    .btn-secondary{
+        color: black;
+        background-image: linear-gradient(gray, white);
+    }
+    .btn-secondary:hover{
+        color: black;
+        background-image: linear-gradient(white, gray);
+    }
+    .btn-danger:hover{
+        color:white;
+        background-image: linear-gradient(red);
+       
+    }
+    .btn-success:hover{
+        color: white;
+        background-image:linear-gradient(green);
+       
+        
+    }
+  </style>
+  </head>  
+  <body class="bg-light">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-30 col-md-50 col-lg-12">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <span id="badge" class="badge text-bg-primary">Level 5</span>
+                            <h1 class="h4 fw-bold text-light mt-2">Counter: Coins</h1>
+                            <p class="text-light"> Use + and - buttons. Coins cannot go below 0.</p>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <button id = "MinusButton" class= "btn btn-danger"> -1 </button>
+                                    <div class="fw-bold text-light fs-5">
+                                        "Coins: "
+                                        <span id="coins">0</span>
+                                    </div>
+                                    <button id = "PlusButton" class= "btn btn-success"> +1 </button>
+                                </div>
+                                <p id="coinMsg" class="small text-light mb-0">
+                                    "Keep clicking and take ascreensjot when coins changed."
+                                </p>
+                                <hr>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-secondary w-50" onclick="window.location.href = 'Task9[Level 4].html' "> Back </button> 
+                                    <button class = "btn btn-info w-50" onclick="window.location.href = 'Task9[Level 6].html' "> Next </button>
+                                </div>
+                                </div>
+                                </div>
+                                <p class="text-center text-muted small mt-3 mb-0">
+                                    "Screenshot #5: Show coins not equal to 0 (changed value)."
+                                </p>
+                                </div>
+                                </div>
+                                </div>
+        
+                                <script>
+                                    let coins = 0;
+
+                                    const coinSpan = document.getElementById("coins");
+                                    const PlusButton = document.getElementById("PlusButton");
+                                    const MinusButton = document.getElementById("MinusButton");
+
+                                    PlusButton.addEventListener("click", function () {
+                                        coins++;
+                                        coinSpan.textContent = coins;
+                                    });
+
+                                    MinusButton.addEventListener("click", function () {
+                                        if (coins > 0) coins--;
+                                        coinSpan.textContent = coins;
+
+                                    });
+
+                                </script>  
+                                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

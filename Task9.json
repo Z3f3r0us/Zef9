@@ -1,0 +1,7 @@
+{
+    "rewrites": [
+        { "source": "/(.*)", "destination": "Task9[Level 1].html Task9[Level 2].html Task9[Level 3].html Task9[Level 4].html Task9[Level 5].html Task9[Level 6].html" }
+       
+        
+    ]
+}
